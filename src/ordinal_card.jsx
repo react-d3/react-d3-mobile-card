@@ -11,8 +11,8 @@ import {
 } from './title';
 
 import {
-  default as RatioDonut
-} from './ratio_donut';
+  default as OrdinalItem
+} from './ordinal';
 
 import {
   default as Note
@@ -20,7 +20,7 @@ import {
 
 import d3 from 'd3';
 
-export default class RatioCard extends Component {
+export default class OrdinalCard extends Component {
   constructor(props) {
     super(props);
   }
@@ -36,12 +36,12 @@ export default class RatioCard extends Component {
       width,
       height,
       title,
-      max,
       value,
       note,
-      colorRange,
       titleClass,
-      donutClass,
+      ordinalRange,
+      ordinalDomain,
+      ordinalClass,
       noteClass,
       itemClass
     } = this.props;
@@ -62,14 +62,14 @@ export default class RatioCard extends Component {
           title= {title}
           titleClass= {titleClass}
         />
-        <RatioDonut
+        <OrdinalItem
           width= {width}
-          height= {height}
-          max= {max}
+          height= {height / 2}
           value= {value}
           data= {data}
-          colorRange= {colorRange}
-          donutClass= {donutClass}
+          ordinalRange= {ordinalRange}
+          ordinalDomain= {ordinalDomain}
+          ordinalClass= {ordinalClass}
         />
         <Note
           data= {data}

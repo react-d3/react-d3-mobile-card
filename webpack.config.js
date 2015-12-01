@@ -15,7 +15,8 @@ module.exports = [{
   name: 'react-d3-core-example-es5',
   devtool: ENV ? "source-map": '',
   entry: {
-    water_donut: './example/src/water_donut.jsx'
+    water_donut: './example/src/water_donut.jsx',
+    ordinal: './example/src/ordinal.jsx'
   },
 
   output: {
