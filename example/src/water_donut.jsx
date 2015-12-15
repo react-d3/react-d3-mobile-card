@@ -14,7 +14,8 @@ var RatioCard = require('../../lib/index').RatioCard;
   var max = function(d) {return 100; };
   var value = function(d) { return d.percentage; }
   var note = function(d) {
-    return 'hi, here is your note area';
+    return '<div><b>更新時間：' + d.updateAt + '</b></div>'
+    + '有效蓄水量：' + d.volumn;
   }
 
   var cards= [];

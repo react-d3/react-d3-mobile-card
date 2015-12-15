@@ -22,11 +22,10 @@ export default class Note extends Component {
       noteClass
     } = this.props;
 
-    var noteContent = note(data);
+    var noteContent = {__html: note(data)};
 
     return (
-      <div className= {noteClass}>
-        {noteContent}
+      <div className= {noteClass} dangerouslySetInnerHTML= {noteContent}>
       </div>
     )
   }

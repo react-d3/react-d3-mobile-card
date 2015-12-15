@@ -1,36 +1,12 @@
-import {
-  default as RatioCard
-} from './ratio_card';
-
-import {
-  default as OrdinalCard
-} from './ordinal_card';
-
-export {OrdinalCard}
-export {RatioCard}
+export RatioCard from './ratio_card';
+export OrdinalCard from './ordinal_card';
 
 // partial
 
-import {
-  default as Title
-} from './title'
-
-import {
-  default as Note
-} from './note'
-
-export {Title}
-export {Note}
+export Title from './title'
+export Note from './note'
 
 // main
 
-import {
-  default as RatioDonut
-} from './ratio_donut';
-
-import {
-  default as Ordinal
-} from './ordinal'
-
-export {Ordinal}
-export {RatioDonut}
+export RatioDonut from './ratio_donut';
+export Ordinal from './ordinal'

@@ -13,7 +13,7 @@ var OrdinalCard = require('../../lib/index').OrdinalCard;
   var title = function(d) { return d.SiteName; }
   var value = function(d) { return d.Status; }
   var note = function(d) {
-    return 'hi, here is your note area';
+    return '<div>狀態：' + d.Status + '</div><div>PM2.5：' + d['PM2.5'] + '</div>';
   }
 
   var cards = data.map(function(d, i) {
