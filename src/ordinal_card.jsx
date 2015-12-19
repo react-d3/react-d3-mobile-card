@@ -6,18 +6,9 @@ import {
   PropTypes
 } from 'react';
 
-import {
-  default as Title
-} from './title';
-
-import {
-  default as OrdinalItem
-} from './ordinal';
-
-import {
-  default as Note
-} from './note';
-
+import Title from './title';
+import OrdinalItem from './ordinal';
+import Note from './note';
 import d3 from 'd3';
 
 export default class OrdinalCard extends Component {

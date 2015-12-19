@@ -6,10 +6,7 @@ import {
   PropTypes
 } from 'react';
 
-import {
-  default as Donut
-} from './donut';
-
+import Donut from './donut';
 import d3 from 'd3';
 
 export default class RatioDonut extends Component {

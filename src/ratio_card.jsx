@@ -6,18 +6,9 @@ import {
   PropTypes
 } from 'react';
 
-import {
-  default as Title
-} from './title';
-
-import {
-  default as RatioDonut
-} from './ratio_donut';
-
-import {
-  default as Note
-} from './note';
-
+import Title from './title';
+import RatioDonut from './ratio_donut';
+import Note from './note';
 import d3 from 'd3';
 
 export default class RatioCard extends Component {

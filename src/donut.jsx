@@ -5,10 +5,7 @@ import {
   Component,
 } from 'react';
 
-import {
-  default as ReactFauxDOM
-} from 'react-faux-dom';
-
+import ReactFauxDOM from 'react-faux-dom';
 import d3 from 'd3';
 
 export default class Donut extends Component {
