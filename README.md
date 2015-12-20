@@ -113,6 +113,25 @@ var RatioCard = require('../../lib/index').RatioCard;
 
 ```
 
+
+### Tag Card
+
+![tag](./example/img/tag.png)
+
+```js
+<TagCard
+  key= {i}
+  data= {d}
+  width= {width}
+  height= {height}
+  title= {titleSet}
+  margins= {{left: 30, bottom: 30, right: 30, top: 30}}
+  value= {text}
+  color= {color}
+  note= {noteSet}
+/>
+```
+
 ## License
 
 Apache 2.0
