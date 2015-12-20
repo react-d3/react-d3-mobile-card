@@ -1,5 +1,6 @@
 export RatioCard from './ratio_card';
 export OrdinalCard from './ordinal_card';
+export TagCard from './tag_card';
 
 // partial
 

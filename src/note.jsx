@@ -18,11 +18,10 @@ export default class Note extends Component {
   render() {
     const {
       note,
-      data,
       noteClass
     } = this.props;
 
-    var noteContent = {__html: note(data)};
+    var noteContent = {__html: note};
 
     return (
       <div className= {noteClass} dangerouslySetInnerHTML= {noteContent}>

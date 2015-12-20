@@ -30,8 +30,6 @@ export default class RatioDonut extends Component {
     } = this.props;
 
     var radius = d3.min([width, height / 2]) / 2;
-    var maxVal = max(data);
-    var pieVal = value(data);
 
     return (
       <div>
@@ -44,8 +42,8 @@ export default class RatioDonut extends Component {
             width= {width}
             height= {height / 2}
             radius= {radius}
-            maxVal= {maxVal}
-            pieVal= {pieVal}
+            maxVal= {max}
+            pieVal= {value}
             colorRange= {colorRange}
           />
         </svg>

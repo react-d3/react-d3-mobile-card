@@ -18,16 +18,13 @@ export default class Title extends Component {
   render() {
     const {
       title,
-      data,
       titleClass
     } = this.props;
-
-    var titleContent = title(data);
 
     return (
       <div className= {titleClass}>
         <h2>
-          {titleContent}
+          {title}
         </h2>
       </div>
     )

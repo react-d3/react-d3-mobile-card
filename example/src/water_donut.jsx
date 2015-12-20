@@ -21,16 +21,21 @@ var RatioCard = require('../../lib/index').RatioCard;
   var cards= [];
 
   for(var key in data) {
+    var titleSet = title(data[key]);
+    var maxSet = max(data[key]);
+    var valueSet = value(data[key]);
+    var noteSet = note(data[key]);
+
     cards.push(
       <RatioCard
         key= {key}
         data= {data[key]}
         width= {width}
         height= {height}
-        title= {title}
-        max= {max}
-        value= {value}
-        note= {note}
+        title= {titleSet}
+        max= {maxSet}
+        value= {valueSet}
+        note= {noteSet}
         colorRange= {['rgb(26,152,80)', 'rgb(165,0,38)']}
         titleClass= {"title-test-class"}
         donutClass= {"donut-test-class"}

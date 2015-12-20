@@ -16,7 +16,8 @@ module.exports = [{
   devtool: ENV ? "source-map": '',
   entry: {
     water_donut: './example/src/water_donut.jsx',
-    ordinal: './example/src/ordinal.jsx'
+    ordinal: './example/src/ordinal.jsx',
+    tag: './example/src/tag.jsx'
   },
 
   output: {

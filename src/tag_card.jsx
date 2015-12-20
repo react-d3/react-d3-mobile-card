@@ -7,17 +7,18 @@ import {
 } from 'react';
 
 import Title from './title';
-import RatioDonut from './ratio_donut';
 import Note from './note';
 import d3 from 'd3';
+import {Tag} from 'react-visual-graphic';
 
-export default class RatioCard extends Component {
+export default class TagCard extends Component {
   constructor(props) {
     super(props);
   }
 
   static defaultProps = {
-    itemClass: "react-d3-mobile-card__item"
+    itemClass: "react-d3-mobile-card__item",
+    margins: {left: 30, bottom: 30, right: 30, top: 30}
   }
 
   render() {
@@ -26,15 +27,14 @@ export default class RatioCard extends Component {
       data,
       width,
       height,
+      margins,
       title,
-      max,
       value,
+      color,
       note,
-      colorRange,
+      itemClass,
       titleClass,
-      donutClass,
-      noteClass,
-      itemClass
+      noteClass
     } = this.props;
 
     var cardStyle = {
@@ -52,15 +52,22 @@ export default class RatioCard extends Component {
           title= {title}
           titleClass= {titleClass}
         />
-        <RatioDonut
-          width= {width}
-          height= {height}
-          max= {max}
-          value= {value}
-          data= {data}
-          colorRange= {colorRange}
-          donutClass= {donutClass}
-        />
+        <div>
+          <svg
+            width= {width}
+            height= {height / 3 + margins.bottom}
+            >
+            <g transform= {`translate(${margins.left}, ${margins.top})`}>
+              <Tag
+                width= {width - margins.left - margins.right}
+                height= {height / 3 - margins.top}
+                text= {value}
+                color= {color}
+                textColor= {'#FFF'}
+              />
+            </g>
+          </svg>
+        </div>
         <Note
           note= {note}
           noteClass= {noteClass}

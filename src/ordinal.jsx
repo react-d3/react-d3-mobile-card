@@ -33,12 +33,10 @@ export default class OrdinalItem extends Component {
       .domain(ordinalDomain)
       .range(ordinalRange);
 
-    var val = value(data);
-
     return (
       <div>
         <img
-          src= {scale(val)}
+          src= {scale(value)}
           height= {height}
           />
       </div>
