@@ -26,6 +26,7 @@ export default class RatioDonut extends Component {
       width,
       height,
       colorRange,
+      colorDomain,
       donutClass
     } = this.props;
 
@@ -45,6 +46,7 @@ export default class RatioDonut extends Component {
             maxVal= {max}
             pieVal= {value}
             colorRange= {colorRange}
+            colorDomain= {colorDomain}
           />
         </svg>
       </div>

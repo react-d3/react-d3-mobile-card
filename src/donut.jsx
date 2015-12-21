@@ -14,6 +14,7 @@ export default class Donut extends Component {
   }
 
   static defaultProps = {
+    colorDomain: [0, 1],
     colorRange: ['#f00', '#00f']
   }
 
@@ -24,11 +25,12 @@ export default class Donut extends Component {
       radius,
       maxVal,
       pieVal,
+      colorDomain,
       colorRange
     } = this.props;
 
-    var color = d3.scale.linear()
-                  .domain([0, 1])
+    var color = d3.scale.quantize()
+                  .domain(colorDomain)
                   .range(colorRange)
 
     var arc = d3.svg.arc()
@@ -56,7 +58,7 @@ export default class Donut extends Component {
 
     g.append("path")
       .attr("d", arc)
-      .style("fill", (d) => { return d.data.name === 'item'? color(d.data.value): '#EEE'; })
+      .style("fill", (d) => {return d.data.name === 'item'? color(d.data.value): '#EEE'; })
       .style("stroke", "#FFF")
 
     g.append("text")

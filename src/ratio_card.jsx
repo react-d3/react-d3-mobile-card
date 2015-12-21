@@ -31,6 +31,7 @@ export default class RatioCard extends Component {
       value,
       note,
       colorRange,
+      colorDomain,
       titleClass,
       donutClass,
       noteClass,
@@ -59,6 +60,7 @@ export default class RatioCard extends Component {
           value= {value}
           data= {data}
           colorRange= {colorRange}
+          colorDomain= {colorDomain}
           donutClass= {donutClass}
         />
         <Note
